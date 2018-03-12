@@ -2,7 +2,6 @@ function printToDom(input, id){
     document.getElementById(id).innerHTML += input;
 }
 
-
 // _______________________________CHALLENGE1_______________________________
 
 var div1 = document.getElementById("challenge-1");
@@ -34,58 +33,69 @@ div1.innerHTML = "<h3>Challenge1:</h3>"
 // _______________________________CHALLENGE2_______________________________
 
 var div2 = document.getElementById("challenge-2");
-var results = [];
+results = [];
 // 1.  Is the number prime?
 // 2,  Is the number even?
 // 3.  Is the number a multiple of 10?
+// simpleMathTest(7)  // ==> [true,  false, false] 
+// simpleMathTest(10) // ==> [false, true,  true]
 
 function testPrime(num){
-    var results = [];
-    if(num === 1){
-        results.push(false);
-    } else if(num === 2){
-        results.push(true);
-    } else{
-        for(var i = 2; i < num; i++){
-            if(num % i === 0){
-                results.push(false);
-            }
-        } 
-        results.push(true);
-    }
-    results.push();
-    console.log(results);
+    // if(num === 1){
+    //     results.push(false);
+    // } else if(num === 2){
+    //     results.push(true);
+    // } 
+    for(var i = 2; i < num; i++){
+        if((num % i) === 0){
+            results.push(false);
+        }
+    } 
+    results.push(true);
 }
 
 function testEven(num){
-    var results = [];
-    if(num % 2 === 0){
+    if((num % 2) === 0){
         results.push(true);
-    } else{
+    } else if((num % 2) !== 0){
         results.push(false);
     }
-    results.push();
-    console.log(results);
 }
 
 function testMultiple(num){
-    var results = [];
-    if(num % 10 === 0){
+    if((num % '10') === 0){
         results.push(true);
-    } else{
+    } else if((num % '10') !== 0){
         results.push(false);
     }
-    results.push();
-    console.log(results);
 }
 
-function simpleMathTest(num){
-    testPrime(num);
-    testEven(num);
-    testMultiple(num);
-}
+function simpleMathTest(number){
+    var results = [];
+    
+    testPrime(number);
+    // results.push(prime);
+    
+    testEven(number);
+    // results.push(even);
 
-simpleMathTest(7);
+    testMultiple(number);
+    // results.push(multiple);
+
+    // return results;
+  
+}
+// simpleMathTest(7);
+simpleMathTest(10);
+
+console.log(results);
+
+var mathTestString = "<h3>Challenge2:</h3>" 
++ "<p> [" + results[0] + ", " + results[1] + ", " + results[2] + "]</p>";
+
+printToDom(mathTestString, "challenge-2"); 
+
+
 
 
 
