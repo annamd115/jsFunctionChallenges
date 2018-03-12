@@ -63,9 +63,9 @@ function testEven(num){
 }
 
 function testMultiple(num){
-    if((num % '10') === 0){
+    if((num % 10) === 0){
         results.push(true);
-    } else if((num % '10') !== 0){
+    } else if((num % 10) !== 0){
         results.push(false);
     }
 }
@@ -85,8 +85,8 @@ function simpleMathTest(number){
     // return results;
   
 }
-// simpleMathTest(7);
-simpleMathTest(10);
+simpleMathTest(7);
+// simpleMathTest(10);
 
 console.log(results);
 
@@ -94,6 +94,9 @@ var mathTestString = "<h3>Challenge2:</h3>"
 + "<p> [" + results[0] + ", " + results[1] + ", " + results[2] + "]</p>";
 
 printToDom(mathTestString, "challenge-2"); 
+
+
+
 
 
 
