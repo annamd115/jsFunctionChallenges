@@ -46,7 +46,7 @@ challenge1(2000, 2000); // You were born this very year!
 Create a function which checks a number for three different properties.
 
 1.  Is the number prime?
-2,  Is the number even?
+2.  Is the number even?
 3.  Is the number a multiple of 10?
 Each should return either true or false, which should be given as an array.
 
