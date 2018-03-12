@@ -63,9 +63,9 @@ function testEven(num){
 }
 
 function testMultiple(num){
-    if((num % '10') === 0){
+    if((num % 10) === 0){
         results.push(true);
-    } else if((num % '10') !== 0){
+    } else if((num % 10) !== 0){
         results.push(false);
     }
 }
