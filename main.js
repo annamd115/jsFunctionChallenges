@@ -85,8 +85,8 @@ function simpleMathTest(number){
     // return results;
   
 }
-// simpleMathTest(7);
-simpleMathTest(10);
+simpleMathTest(7);
+// simpleMathTest(10);
 
 console.log(results);
 
@@ -94,6 +94,9 @@ var mathTestString = "<h3>Challenge2:</h3>"
 + "<p> [" + results[0] + ", " + results[1] + ", " + results[2] + "]</p>";
 
 printToDom(mathTestString, "challenge-2"); 
+
+
+
 
 
 
